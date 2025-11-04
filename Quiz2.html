@@ -422,7 +422,7 @@ function showResults(){
         Correct answer: <b>${q.options[correct]}</b></div>`;
     }
   });
-  document.getElementById("scoreText").innerHTML = `🎯 You scored ${score} out of ${quizData.length}`;
+  document.getElementById("scoreText").innerHTML = `🎯 Secured ${score} out of ${quizData.length}`;
   document.getElementById("answers").innerHTML = answersHtml;
 }
 
@@ -432,7 +432,7 @@ function shareResult(){
   const scoreText = document.getElementById("scoreText").textContent;
   const shareMessage = `🎯 I have appear test!\n${scoreText}\n\n🤩 You also try!\n👉 moparikhyasathi.blogspot.com`;
   if(navigator.share){
-    navigator.share({title:"Mo Parikhya Sathi  - Quiz Result", text:shareMessage, url:window.location.href});
+    navigator.share({title:"Mo Parikhya Sathi  - Quiz Result", text:shareMessage, url:moparikhyasathi.blogspot.com});
   } else {alert("Share this message:\n\n"+shareMessage);}
 }
 
