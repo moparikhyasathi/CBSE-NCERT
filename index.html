@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ମୋ ପରୀକ୍ଷା ସାଥି (Mo Parikhya Sathi)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&family=Noto+Sans+Oriya:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans Oriya', sans-serif}
+body{background:#f7f3ff;color:#222;line-height:1.7}
+header{background:linear-gradient(120deg,#ff6a00,#ff2e63);padding:35px 0;text-align:center;color:#fff;border-bottom-left-radius:50px;border-bottom-right-radius:50px;box-shadow:0 5px 18px rgba(0,0,0,.18)}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:25px;padding:15px 0;background:#fff;border-radius:50px;width:90%;margin:20px auto;box-shadow:0 3px 15px rgba(0,0,0,.1)}
+nav a{font-weight:600;color:#ff2e63;text-decoration:none;transition:.3s;cursor:pointer}
+nav a:hover{color:#ff6a00;transform:scale(1.08)}
+section{padding:45px 20px;max-width:1200px;margin:auto;display:none;animation:fadeIn .6s ease}
+section.active{display:block;}
+@keyframes fadeIn {
+  from {opacity:0;transform:translateY(20px);}
+  to {opacity:1;transform:translateY(0);}
+}
+h2{text-align:center;font-size:28px;color:#ff2e63;margin-bottom:15px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px}
+.card{background:#fff;padding:18px;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.08);cursor:pointer;transition:.3s;text-align:center}
+.card:hover{transform:translateY(-6px);box-shadow:0 10px 28px rgba(0,0,0,.13);background:linear-gradient(120deg,#ff6a00,#ff2e63);color:#fff}
+.sub-box{background:#fff;padding:16px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.08);margin-top:8px}
+.sub-btn{display:block;padding:10px;margin:6px 0;background:#ffdde1;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:.3s;width:100%}
+.sub-btn:hover{background:#ff2e63;color:#fff}
+footer {
+  text-align: center;
+  background: linear-gradient(120deg,#ff6a00,#ff2e63);
+  color: #fff;
+  padding: 15px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: 40px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.15); /* optional glow */
+}
+
+/* 🪄 Popup Modal Style */
+.modal {
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.5);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+  animation:fadeIn .3s ease;
+}
+.modal-content {
+  background:#fff;
+  border-radius:20px;
+  padding:35px 28px;
+  width:90%;
+  max-width:700px;
+  box-shadow:0 8px 25px rgba(0,0,0,.2);
+  position:relative;
+  animation:fadeInUp .4s ease;
+}
+@keyframes fadeInUp {
+  from {transform:translateY(40px);opacity:0;}
+  to {transform:translateY(0);opacity:1;}
+}
+.close-btn {
+  position:absolute;
+  top:12px;
+  right:18px;
+  background:#ff2e63;
+  color:#fff;
+  border:none;
+  font-size:18px;
+  border-radius:50%;
+  width:32px;
+  height:32px;
+  cursor:pointer;
+  transition:.3s;
+}
+.close-btn:hover {background:#ff6a00;}
+
+/* ✨ Updated text formatting */
+#modalTitle {
+  color:#ff2e63;
+  text-align:center;       /* 👈 Centered title */
+  margin-bottom:15px;
+  font-weight:700;
+  font-size:22px;
+}
+
+#modalBody {
+  text-align:justify;      /* 👈 Justified paragraph text */
+  font-size:17px;
+  line-height:1.8;
+  color:#333;
+}
+</style>
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧠 Practice Questions</h1>
+  <p>🤗"Self-knowledge is the path to mastering the whole universe."🤗</p>
+</header>
+
+<nav>
+  <a data-target="home">🏠 Home</a>
+  <a data-target="ebooks">📚 E-Text Books</a>
+  <a data-target="notes">📝 Notes</a>
+  <a data-target="practice">🧠 Practice</a>
+</nav>
+
+<!-- 🏠 Home Section -->
+<section id="home" class="active">
+  <h2>🏠 Home</h2>
+  <p style="text-align:center;max-width:700px;margin:20px auto;font-size:18px;">
+    🌸🌸" Welcome to Mo Parikhya Sathi "🌸🌸   <br><br>
+    Dear Friend,<br>
+We warmly welcome you to "Mo Parikhya Sathi", your trusted companion for exam.<br>
+Our mission is to make your academic journey smoother by providing transparent, accessible and efficient exam support- all in one place. 
+    <br><br>
+    🔹 Learn, Practice and Move Ahead- We Always with you.! 💪
+  </p>
+  <div style="text-align:center;margin-top:25px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Student" width="150" style="border-radius:50%;box-shadow:0 4px 15px rgba(0,0,0,.15)">
+  </div>
+</section>
+
+<!-- 📚 Ebooks Section -->
+<section id="ebooks">
+  <h2>📚 E-Text Books</h2>
+  <div class="grid">
+    <div class="card">Sanskrit</div>
+    <div class="card">English</div>
+    <div class="card">Science</div>
+    <div class="card">Mathematics</div>
+<div class="card">Social Science</div>
+<div class="card">Hindi</div>
+  </div>
+</section>
+
+<!-- 📝 Notes Section -->
+<section id="notes">
+  <h2>📝 Notes</h2>
+  <div class="grid">
+    <div class="card">Sanskrit<br>Avalaible Shortly<div class="sub-box">
+      <button class="sub-btn" onclick="openModal('Sanschapter1')">Chapter 1</button>
+      <button class="sub-btn" onclick="openModal('Sanschapter2')">Chapter 2</button>
+      <button class="sub-btn" onclick="openModal('Sanschapter3')">Chapter 3</button>
+    </div></div>
+    <div class="card">English<br> Coming Soon...<div class="sub-box">
+      <button class="sub-btn" onclick="openModal('chapterEng1')">Chapter 1</button>
+      <button class="sub-btn" onclick="openModal('chapterEng2')">Chapter 2</button>
+    </div></div>
+  
+<div class="card">Science<br> Coming Soon...<div class="sub-box">
+      <button class="sub-btn" onclick="openModal('chapter1')">Chapter 1</button>
+      <button class="sub-btn" onclick="openModal('chapter2')">Chapter 2</button>
+      <button class="sub-btn" onclick="openModal('chapter3')">Chapter 3</button>
+    </div></div>
+<div class="card">Mathematics<br> Coming Soon...<div class="sub-box">
+      <button class="sub-btn" onclick="openModal('chapter1')">Chapter 1</button>
+      <button class="sub-btn" onclick="openModal('chapter2')">Chapter 2</button>
+      <button class="sub-btn" onclick="openModal('chapter3')">Chapter 3</button>
+    </div></div>
+<div class="card">Social Science...<br> Coming Soon<div class="sub-box">
+      <button class="sub-btn" onclick="openModal('chapter1')">Chapter 1</button>
+      <button class="sub-btn" onclick="openModal('chapter2')">Chapter 2</button>
+      <button class="sub-btn" onclick="openModal('chapter3')">Chapter 3</button>
+    </div></div>
+<div class="card">Hindi<br> Coming Soon...<div class="sub-box">
+      <button class="sub-btn" onclick="openModal('chapter1')">Chapter 1</button>
+      <button class="sub-btn" onclick="openModal('chapter2')">Chapter 2</button>
+      <button class="sub-btn" onclick="openModal('chapter3')">Chapter 3</button>
+    </div></div>
+</div>
+
+</section>
+
+<!-- 🧠 Practice Section -->
+<section id="practice">
+  <h2>🧠 ଅଭ୍ୟାସ</h2>
+  <div class="grid">
+    <div class="card">Sanskrit<div class="sub-box">
+      <button class="sub-btn" onclick="window.open('Quiz.html', '_blank')">Set-1</button>
+      <button class="sub-btn" onclick="window.open('Quiz1.html', '_blank')">Set-2</button>
+      <button class="sub-btn" onclick="window.open('Quiz2.html', '_blank')">Set-3</button>
+    </div></div>
+    <div class="card">English <br> Coming Soon...<div class="sub-box">
+      <button class="sub-btn">Chapter-1</button>
+      <button class="sub-btn">Chapter-2</button>
+    </div></div>
+<div class="card">Science <br> Coming Soon...<div class="sub-box">
+      <button class="sub-btn">Chapter-1</button>
+      <button class="sub-btn">Chapter-2</button>
+    </div></div>
+<div class="card">Mathematics <br> Coming Soon...<div class="sub-box">
+      <button class="sub-btn">Chapter-1</button>
+      <button class="sub-btn">Chapter-2</button>
+    </div></div>
+<div class="card">Social Science <br> Coming Soon...<div class="sub-box">
+      <button class="sub-btn">Chapter-1</button>
+      <button class="sub-btn">Chapter-2</button>
+    </div></div>
+
+  </div>
+</section>
+
+<!-- 🪄 Popup Modal -->
+<div class="modal" id="popupModal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal()">✖</button>
+    <h3 id="modalTitle" style="color:#ff2e63;margin-bottom:10px;"></h3>
+    <p id="modalBody"></p>
+  </div>
+</div>
+
+<footer>© 2025 ମୋ ପରୀକ୍ଷା ସାଥି(Mo Parikhya Sathi) | Made With ❤ </footer>
+
+<script>
+// 🔹 Section Navigation
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    const targetId = link.getAttribute("data-target");
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(targetId).classList.add("active");
+    window.scrollTo({top: 0, behavior: "smooth"});
+  });
+});
+
+// 🔹 Chapter Popup Data
+const chapters = {
+  Sanschapter1: {
+    title: "📖 Sanskrit: मणिका",
+    body: "Work is under process..।"
+  },
+  Sanschapter2: {
+    title: "📖 Ch-2",
+    body: "Work is under process..।"
+  },
+  Sanschapter3: {
+    title: "📖 Ch-3",
+    body: "Work is under process..।"
+  },
+  chapterEng1: {
+    title: "📖 English Chapter 1",
+    body: "Work is under process..।"
+  },
+  chapterEng2: {
+    title: "📖 English Chapter 2",
+    body: "Work is under process..।"
+ }
+
+};
+
+// 🔹 Open Modal
+function openModal(chapterId) {
+  const modal = document.getElementById("popupModal");
+  const title = document.getElementById("modalTitle");
+  const body = document.getElementById("modalBody");
+
+  const content = chapters[chapterId];
+  title.textContent = content.title;
+  body.textContent = content.body;
+
+  modal.style.display = "flex";
+}
+
+// 🔹 Close Modal
+function closeModal() {
+  document.getElementById("popupModal").style.display = "none";
+}
+
+// Close if user clicks outside modal box
+window.addEventListener("click", function(e) {
+  const modal = document.getElementById("popupModal");
+  if (e.target === modal) closeModal();
+});
+</script>
+
+</body>
+</html>
