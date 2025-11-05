@@ -131,17 +131,63 @@ Let’s prepare, progress, and succeed together!
 </section>
 
 <!-- 📚 Ebooks Section -->
+<!-- 📚 Ebooks Section -->
 <section id="ebooks">
   <h2>📚 E-Text Books<br>Available Shortly...</h2>
   <div class="grid">
-    <div class="card">Sanskrit</div>
-    <div class="card">English</div>
-    <div class="card">Science</div>
-    <div class="card">Mathematics</div>
-<div class="card">Social Science</div>
-<div class="card">Hindi</div>
+
+    <div class="card">Sanskrit
+      <div class="sub-box" style="display:none;">
+        <button class="sub-btn" onclick="window.open('https://cbseacademic.nic.in/web_material/publication/Sanskrit_Manika_10_2023.pdf', '_blank')">मणिका</button>
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhsk1=0-10', '_blank')">शेमुषी</button>
+<button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhva1=0-12', '_blank')">व्याकरणविथिः</button>
+      </div>
+    </div>
+
+    <div class="card">English
+      <div class="sub-box" style="display:none;">
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jeff1=0-9', '_blank')">First Flight</button>
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jefp1=0-9', '_blank')">Foot Print W. F.</button>
+<button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jewe2=0-9', '_blank')">Words and Exp.</button>
+      </div>
+    </div>
+
+    <div class="card">Science
+      <div class="sub-box" style="display:none;">
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jesc1=0-13', '_blank')">Science</button>
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhsc1=0-13', '_blank')">विज्ञान</button>
+      </div>
+    </div>
+
+    <div class="card">Mathematics
+      <div class="sub-box" style="display:none;">
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jemh1=0-14', '_blank')">Mathematics</button>
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhmh1=0-14', '_blank')">गणित</button>
+      </div>
+    </div>
+
+    
+
+    <div class="card">Hindi
+      <div class="sub-box" style="display:none;">
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhks1=0-12', '_blank')">क्षितिज् 2</button>
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhsp1=0-14', '_blank')">स्पर्श</button>
+      </div>
+    </div>
+<div class="card">Social Science
+      <div class="sub-box" style="display:none;">
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jess1=0-7', '_blank')">Contemporary India</button>
+        <button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhss1=0-7', '_blank')">समकालिन भारत</button>
+<button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jess2=0-5', '_blank')">U.Eco. Dev.</button>
+<button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhss2=0-5', '_blank')">आ. वि. खो.</button>
+<button class="sub-btn" onclick="window.open('https://ncert.nic.in/textbook.php?jhss4=0-5', '_blank')"> SST All</button>
+
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <!-- 📝 Notes Section -->
 <section id="notes">
@@ -188,7 +234,7 @@ Let’s prepare, progress, and succeed together!
     <div class="card">Sanskrit<div class="sub-box">
       <button class="sub-btn" onclick="window.open('Quiz.html', '')">Set-1</button>
       <button class="sub-btn" onclick="window.open('Quiz1.html', '')">Set-2</button>
-      <button class="sub-btn" onclick="window.open('Quiz2.html', '')">Set-3</button>
+      <button class="sub-btn" onclick="window.open('Quiz2.html', '_blank')">Set-3</button>
     </div></div>
     <div class="card">English <br> Coming Soon...<div class="sub-box">
       <button class="sub-btn">Chapter-1</button>
@@ -222,6 +268,24 @@ Let’s prepare, progress, and succeed together!
 <footer>© 2025 ମୋ ପରୀକ୍ଷା ସାଥି(Mo Parikhya Sathi) | Made With ❤ </footer>
 
 <script>
+// 🔹 Toggle sub-buttons in E-books section (works on all devices)
+document.querySelectorAll("#ebooks .card").forEach(card => {
+  card.addEventListener("click", e => {
+    // Prevent clicks on sub-buttons from re-triggering card click
+    if (e.target.classList.contains("sub-btn")) return;
+
+    const subBox = card.querySelector(".sub-box");
+
+    // Hide all others first
+    document.querySelectorAll("#ebooks .sub-box").forEach(box => {
+      if (box !== subBox) box.style.display = "none";
+    });
+
+    // Toggle this one
+    subBox.style.display = subBox.style.display === "block" ? "none" : "block";
+  });
+});
+
 // 🔹 Section Navigation
 document.querySelectorAll("nav a").forEach(link => {
   link.addEventListener("click", () => {
@@ -284,7 +348,6 @@ window.addEventListener("click", function(e) {
 
 </body>
 </html>
-
 
 
 
