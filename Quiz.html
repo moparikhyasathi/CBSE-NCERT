@@ -432,7 +432,7 @@ function shareResult(){
   const scoreText = document.getElementById("scoreText").textContent;
   const shareMessage = `🎯 I have appear test!\n${scoreText}\n\n🤩 You also try!\n👉 moparikhyasathi.blogspot.com`;
   if(navigator.share){
-    navigator.share({title:"Mo Parikhya Sathi  - Quiz Result", text:shareMessage, url:moparikhyasathi.blogspot.com});
+    navigator.share({title:"Mo Parikhya Sathi  - Quiz Result", text:shareMessage, url:window.location.href});
   } else {alert("Share this message:\n\n"+shareMessage);}
 }
 
@@ -464,3 +464,4 @@ renderQuestion(currentIndex);
 
 </body>
 </html>
+
